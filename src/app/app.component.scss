@@ -9,15 +9,30 @@
     height: 335px;
     padding: 16px;
     border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
 
     .input {
       border: none;
+      display: flex;
+      border: 1px solid black;
+      border-radius: 8px;
+      padding: 8px;
     }
 
     .input-field {
       width: 95.5%;
       height: 30px;
       padding: 8px;
+      border: none;
+
+      &:focus {
+        border: none;
+      }
     }
 
     .number-and-actions {
@@ -44,6 +59,8 @@
       height: 40px;
       margin-top: 16px;
     }
+
+
   }
 }
 
@@ -58,6 +75,11 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 

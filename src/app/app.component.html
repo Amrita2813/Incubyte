@@ -4,11 +4,11 @@
   <div class="main-container">
     <form class="input" >
       <input type="text" class="input-field" [formControl]="number">
-      <span>{{result}}</span>
+      <span class="result">{{result}}</span>
     </form>
     <div class="number-and-actions">
       <div class="grid">
-        <button class="numbers-btn" *ngFor="let number of numbers" (click)="appendNumber(number)">
+        <button class="action-btn" *ngFor="let number of numbers" (click)="appendNumber(number)">
           <span>{{number}}</span>
         </button>
       </div>
@@ -19,7 +19,7 @@
         </button>
       </div>
       <div class="actions">
-        <button *ngFor="let action of otherOperations" class="action-btn" (click)="operatorClicked(action)">
+        <button *ngFor="let action of otherOperations" class="action-btn" (click)="actionClicked(action)">
           <span>{{action}}</span>
         </button>
       </div>

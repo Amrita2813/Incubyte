@@ -11,4 +11,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'incubyte';
+
+  numbers = [1,2,3,4,5,6,7,8,9];
+  actions = ['+ Add','- Sub','* Mul']
 }

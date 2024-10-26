@@ -20,10 +20,27 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('incubyte');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, incubyte');
-  });
+  it('it should return sum of the numbers provided', () => {
+    const app = new AppComponent();
+    const result = app.operate('+', 1, 2);
+    expect(result).toBe(3);
+  })
+
+  it('it should return sum of the numbers provided', () => {
+    const app = new AppComponent();
+    const result = app.operate('+', -1, 2);
+    expect(result).toBe(1);
+  })
+
+  it('it should return sum of the numbers provided', () => {
+    const app = new AppComponent();
+    const result = app.operate('+', -100, 2);
+    expect(result).toBe(-98);
+  })
+
+  it('it should return sum of the numbers provided', () => {
+    const app = new AppComponent();
+    const result = app.operate('+', -100, -12);
+    expect(result).toBe(-112);
+  })
 });

@@ -2,23 +2,26 @@
 <!-- Make grid   -->
 <div class="calculator-container">
   <div class="main-container">
-    <div class="input">
-      <input type="text" class="input-field">
-    </div>
+    <form class="input" >
+      <input type="text" class="input-field" [formControl]="number">
+      <span>{{result}}</span>
+    </form>
     <div class="number-and-actions">
       <div class="grid">
-        <button class="numbers-btn" *ngFor="let number of numbers">
+        <button class="numbers-btn" *ngFor="let number of numbers" (click)="appendNumber(number)">
           <span>{{number}}</span>
         </button>
       </div>
 
       <div class="actions">
-        <button *ngFor="let action of actions" class="action-btn" >
+        <button *ngFor="let action of actions" class="action-btn" (click)="operatorClicked(action)">
           <span>{{action}}</span>
         </button>
       </div>
-      <div class="zero">
-        <button class="zero-btn">0</button>
+      <div class="actions">
+        <button *ngFor="let action of otherOperations" class="action-btn" (click)="operatorClicked(action)">
+          <span>{{action}}</span>
+        </button>
       </div>
     </div>
   </div>

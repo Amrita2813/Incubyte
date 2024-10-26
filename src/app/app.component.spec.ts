@@ -43,4 +43,28 @@ describe('AppComponent', () => {
     const result = app.operate('+', -100, -12);
     expect(result).toBe(-112);
   })
+
+    it('it should return subtraction of the numbers provided', () => {
+    const app = new AppComponent();
+    const result = app.operate('-', 100, -50);
+    expect(result).toBe(50);
+  })
+
+    it('it should return subtraction of the numbers provided', () => {
+    const app = new AppComponent();
+    const result = app.operate('-', -10, 40);
+    expect(result).toBe(-50);
+  })
+
+    it('it should return multiplication of the numbers provided', () => {
+    const app = new AppComponent();
+    const result = app.operate('*', -1, -2);
+    expect(result).toBe(-2);
+  })
+
+    it('it should return multiplication of the numbers provided', () => {
+    const app = new AppComponent();
+    const result = app.operate('*', -100, 0);
+    expect(result).toBe(0);
+  })
 });
